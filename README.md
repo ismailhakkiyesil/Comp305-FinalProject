@@ -1,4 +1,4 @@
-İsmail Hakkı Yeşil and Beyza Gündoğan
+## İsmail Hakkı Yeşil and Beyza Gündoğan
 
 # This is our Comp305-FinalProject
 
