@@ -25,7 +25,10 @@
 #### Output:
 #### The total cost of consolidating the output of n factories into k warehouses.
 ---------------------------------------------------------------------------------------------------------------------
-#### Solution 1 - version 1
-####   Sort by xi values and create k clusters. If there is/are factories left outside because n (mod k) != 0, then add them to the last cluster.
-####   Then for the each cluster, calculate the average of the xis. Then match them to the closest xi since warehosue locations are selected from existing #### factories
+#### Solution 1
+####   Sort by xi values and create k clusters. Then for the each cluster, calculate the average of the xis. Then match them to the closest xi since warehouse locations are selected from existing factories
+####  Finally calculate the cost of transfering products from factory located at xi to warehouse located at xj.
+---------------------------------------------------------------------------------------------------------------------
+#### Solution 2
+####   Sort by xi values and create k clusters. Clusters are formed with respect to their weighted (product size) distances between them. Then match clusters to the closest xi since warehouse locations are selected from existing factories
 ####  Finally calculate the cost of transfering products from factory located at xi to warehouse located at xj.
