@@ -15,6 +15,7 @@
 # ---------------------------------------------------------------------------------------------------------------------
 # Output:
 # The total cost of consolidating the output of n factories into k warehouses.
+
 import numpy as np
 
 # Taking number of factories and warehouses
@@ -47,7 +48,6 @@ def cost_func(factory, warehouse):
 # Solution 1:
 # Use the means of the xis as warehouse places
 # k-Cluster values with respect to their distances between them
-# -v2 # k-Cluster values with respect to their weighted distances between them
 def solution1():
     print('\nNow running the algorithm that uses means of the clusters for warehouse locations')
     print('Clusters are formed with respect to their distances between them\n')
@@ -95,14 +95,12 @@ def solution1():
 
 
 # Solution 2:
-# Use the medians of the xis as warehouse places
-# k-Cluster values with respect to their distances between them
-# -v2 # k-Cluster values with respect to their weighted distances between them
+# Use the means of the xis as warehouse places
+# k-Cluster values with respect to their weighted distances between them
 
 def solution2():
     print('\nClusters are formed with respect to their weighted (product size) distances between them\n')
 
-    # weighted_facts = sorted(facts, key=lambda elem: elem[0] * elem[1], reverse=True)
     ordered_facts = sorted(facts)
     wh_places = []
     sum_of_weights = 0
@@ -148,9 +146,12 @@ def solution2():
 
 
 # Solution 3:
-# Use the weighted averages of the xis as warehouse places
-# k-Cluster values with respect to their distances between them
-# -v2 k-Cluster values with respect to their weighted distances between them
+# k-means clustering in 1-D
+# Distances are calculated as transfer cost between 2 points
+
+# Solution 4:
+# Jenks natural break algorithm
+
 
 solution1()
 solution2()
